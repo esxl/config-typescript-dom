@@ -45,7 +45,9 @@ updates:
       - bot-dependabot
       - npm-dependencies
     open-pull-requests-limit: 10
-    registries: '*'
+    registries:
+      - npm-npmjs
+      - npm-github
     schedule:
       interval: daily
       time: '11:00'
