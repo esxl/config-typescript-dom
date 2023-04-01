@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"]
+  },
+  "extends": "@esxl/config-typescript-base"
+}
