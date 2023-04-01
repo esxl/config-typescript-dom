@@ -8,10 +8,6 @@ registries:
     type: npm-registry
     url: https://npm.pkg.github.com
 
-  npm-npmjs:
-    type: npm-registry
-    url: https://registry.npmjs.org
-
 # https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
 updates:
   # https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/keeping-your-actions-up-to-date-with-dependabot
@@ -43,9 +39,7 @@ updates:
       - bot-dependabot
       - npm-dependencies
     open-pull-requests-limit: 10
-    registries:
-      - npm-github
-      - npm-npmjs
+    registries: '*'
     schedule:
       interval: daily
       time: '11:00'
