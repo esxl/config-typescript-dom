@@ -1,0 +1,55 @@
+{
+  "bugs": {
+    "url": "https://github.com/esxl/config-typescript-dom/issues"
+  },
+  "description": "A reusable TypeScript configuration for projects that run in a DOM environment",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.3",
+    "ajv": "^6.12.6",
+    "babel-plugin-transform-import-meta": "^2.2.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "jest": "^29.5.0",
+    "lint-staged": "^13.2.0",
+    "prettier": "2.8.5",
+    "typescript": "^5.0.2"
+  },
+  "engines": {
+    "node": "^16 || ^18 || >=19",
+    "npm": "^8.19.3 || >=9"
+  },
+  "exports": "./tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "homepage": "https://github.com/esxl/config-typescript-dom#readme",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "main": "./tsconfig.json",
+  "name": "@esxl/config-typescript-dom",
+  "peerDependencies": {
+    "@esxl/config-typescript-base": "^0.1.1",
+    "typescript": "^5.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esxl/config-typescript-dom.git"
+  },
+  "scripts": {
+    "format:check": "prettier --check --ignore-unknown .",
+    "format:fix": "prettier --ignore-unknown --write .",
+    "postversion": "git push origin --follow-tags",
+    "prepare": "is-ci || husky install",
+    "pre-commit": "lint-staged",
+    "preversion": "npm run format:check && npm test -- --coverage",
+    "test": "jest",
+    "test:debug": "jest --debug --detectOpenHandles --runInBand"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}

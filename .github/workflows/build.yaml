@@ -1,0 +1,22 @@
+name: Build
+
+env:
+  CI: true
+
+on:
+  pull_request:
+    branches: [main]
+
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: esxl/action-package-build@v0.5.0
+        with:
+          node-version: ${{ matrix.node-version }}
+    strategy:
+      matrix:
+        node-version: [16, 18, 19]

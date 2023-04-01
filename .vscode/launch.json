@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "name": "Jest all",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "test:debug"],
+      "runtimeExecutable": "npm",
+      "type": "node"
+    },
+    {
+      "args": ["-- ${fileBasename}"],
+      "console": "internalConsole",
+      "cwd": "${workspaceFolder}",
+      "name": "Jest current file",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "test:debug"],
+      "runtimeExecutable": "npm",
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}

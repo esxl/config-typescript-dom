@@ -1,0 +1,21 @@
+name: Publish
+
+env:
+  CI: true
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-gpr:
+    name: Publish to GitHub Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: esxl/action-package-build@v0.5.0
+        with:
+          node-version-file: .nvmrc
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
