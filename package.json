@@ -8,7 +8,7 @@
     "@babel/preset-env": "^7.20.2",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.3",
-    "ajv": "^6.12.6",
+    "ajv": "^8.12.0",
     "babel-plugin-transform-import-meta": "^2.2.0",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
