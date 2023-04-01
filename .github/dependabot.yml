@@ -3,6 +3,7 @@ version: 2
 registries:
   # https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates#npm-registry
   npm-github:
+    replaces-base: false
     token: ${{ secrets.BOT_GITHUB_PACKAGES_READONLY }}
     type: npm-registry
     url: https://npm.pkg.github.com
