@@ -9,7 +9,7 @@ registries:
     url: https://npm.pkg.github.com
 
   npm-npmjs:
-    replaces-base: false
+    replaces-base: true
     token: ${{ secrets.BOT_NPM_PACKAGES_READONLY }}
     type: npm-registry
     url: https://registry.npmjs.org
