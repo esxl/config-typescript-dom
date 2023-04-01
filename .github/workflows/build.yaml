@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: esxl/action-package-build@v0.5.0
+      - uses: esxl/action-package-build@v0.7.0
         with:
           node-version: ${{ matrix.node-version }}
     strategy:

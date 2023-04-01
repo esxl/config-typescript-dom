@@ -12,7 +12,7 @@ jobs:
     name: Publish to GitHub Packages
     runs-on: ubuntu-latest
     steps:
-      - uses: esxl/action-package-build@v0.5.0
+      - uses: esxl/action-package-build@v0.7.0
         with:
           node-version-file: .nvmrc
 
