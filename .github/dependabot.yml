@@ -8,6 +8,12 @@ registries:
     type: npm-registry
     url: https://npm.pkg.github.com
 
+  npm-npmjs:
+    replaces-base: false
+    token: ${{ secrets.BOT_NPM_PACKAGES_READONLY }}
+    type: npm-registry
+    url: https://registry.npmjs.org
+
 # https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
 updates:
   # https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/keeping-your-actions-up-to-date-with-dependabot
