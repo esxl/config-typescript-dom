@@ -6,7 +6,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
-    "@types/jest": "^29.5.0",
+    "@types/jest": "^29.5.1",
     "@types/node": "^18.15.3",
     "ajv": "^6.12.6",
     "babel-plugin-transform-import-meta": "^2.2.0",
